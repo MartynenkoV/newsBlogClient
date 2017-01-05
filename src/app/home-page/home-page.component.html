@@ -1,7 +1,7 @@
 
 <div class='back'>
-<app-news-preview></app-news-preview>
-<!-- <app-news-preview></app-news-preview>
-<app-news-preview></app-news-preview>
-<app-news-preview></app-news-preview> -->
+
+<div *ngFor="let item of data">
+<app-news-preview [data] = "item"></app-news-preview>
+</div>
 </div>
