@@ -2,25 +2,25 @@
 	<div class="row ">
 
 		<div class="col-md-2 dateBlock">
-		{{data.date}}
+			{{data.date}}
 
-		<br>
-		<span>
-		{{data.comments.length}}
-		<i class="glyphicon glyphicon-comment"></i>
-		{{data.date}}
-		<i class="glyphicon glyphicon-time"></i>
-		</span>
+			<br>
+			<span>
+				{{data.comments.length}}
+				<i class="glyphicon glyphicon-comment"></i>
+				{{data.date}}
+				<i class="glyphicon glyphicon-time"></i>
+			</span>
 		</div>
 		
 		<div class="col-md-5 titleBlock">
-		<h3>{{data.title}}</h3>
-		<p>{{data.content}}</p>
+			<h3>{{data.title}}</h3>
+			<p>{{data.content}}</p>
 		</div>
 
 		<div class="col-md-5">
-		<img [src] = "data.image" class="img-responsive">
-		
+			<img [src] = "data.image" class="img-responsive">
+			
 		</div>
 
 	</div>

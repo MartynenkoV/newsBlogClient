@@ -10,6 +10,8 @@ export class NewsPreviewComponent implements OnInit {
   
   @Input() data:any; 	
 
+  
+
   // data = {
   // 	title:"Title1",
   // 	content:"aaaaaaaa",

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavigationHeaderComponent } from './navigation-header/navigation-header.component';
@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 //Routing
 import { routing }   from './app.routing';
 import { NewsPreviewComponent } from './news-preview/news-preview.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { NewsPreviewComponent } from './news-preview/news-preview.component';
     NavigationHeaderComponent,
     FooterComponent,
     HomePageComponent,
-    NewsPreviewComponent
+    NewsPreviewComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
     routing
   ],
   providers: [],
