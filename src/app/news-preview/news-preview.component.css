@@ -4,20 +4,36 @@
 }	
 
 .dateBlock{
-	min-height: 345px;
+	/*min-height: 345px;*/
 	position: relative;
 }
-
+@media only screen and (min-width : 1024px){
 .dateBlock span{
    position: absolute;
    bottom: 0;
 }
+}
 .titleBlock{
 	background-color: #A8A8A8;
-	min-height: 345px;
 }
 
-.imageBlock{
-
+.titleBlock:hover { 
+    background-color: #90908C;
+	cursor: pointer;
 }
 
+.imageBlock:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@media only screen and (min-width : 1024px) {
+    .is-table-row {
+        display: table;
+    }
+    .is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}

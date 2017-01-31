@@ -1,5 +1,13 @@
-<div class='back'>
-  <div *ngFor="let item of data">
-    <app-news-preview [data]="item"></app-news-preview>
-  </div>
+<div class="container back">
+  <app-news-preview *ngFor="let item of data" [data]="item"></app-news-preview>
+  <ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a class="active" href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
 </div>

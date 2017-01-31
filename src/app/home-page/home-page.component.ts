@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Http,Response} from '@angular/http';
+import{Router, ActivatedRoute, Params} from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 @Component({
 	selector: 'app-home-page',
@@ -7,35 +12,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-	// get data http
-	data = [{
-		title: "Title1",
-		content: "aaaaaaaa",
-		date: "dd/MM/yyyy",
-		comments: [1, 2, 3, 4, 5, 6],
-		image: "../assets/hierarchicalstructureofthei.jpg"
-	}, {
-		title: "Title2",
-		content: "aaaaaaaa",
-		date: "dd/MM/yyyy",
-		comments: [1, 2, 3, 4, 6],
-		image: "../assets/fc7021_61c6672c854f4e41ba9ad1e1783ace3a.jpg"
-	}, {
-		title: "Title3",
-		content: "aaaaaaaa",
-		date: "dd/MM/yyyy",
-		comments: [1, 2, 3, 4, 5, 6],
-		image: "../assets/looksdelicious.jpg"
-	}, {
-		title: "Title4",
-		content: "aaaaaaaa",
-		date: "dd/MM/yyyy",
-		comments: [1, 2, 3],
-		image: "../assets/mappingtheblogosphere.jpg"
-	}]
-	constructor() {
 
+	data = [];
+	
+	//Pagination
+	numberPerPage:Number = 5;
+	numberPages:Number;
+
+	
+
+	constructor(private http: Http,private route:ActivatedRoute) {
+		//const url: Observable<string> = route.url.map(segments => segments.join(''));
+		console.log(route.snapshot.url.toString());
+	  http.get('http://localhost:3000/'+route.snapshot.url.toString())
+	    .subscribe(response => {
+	      //console.log(response.json());
+	      this.data = response.json().news;
+				this.numberPages = response.json().count;
+	    });
 	}
+
+
 
 	ngOnInit() {
 	}

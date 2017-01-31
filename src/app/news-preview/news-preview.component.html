@@ -1,28 +1,29 @@
-<div class="container">
-	<div class="row ">
 
-		<div class="col-md-2 dateBlock">
-			{{data.date}}
+	<div class="row is-table-row">
+
+		<div class="col-md-2 col-xs-12 dateBlock">
+			{{data.date | date}}
 
 			<br>
 			<span>
 				{{data.comments.length}}
 				<i class="glyphicon glyphicon-comment"></i>
-				{{data.date}}
+				|
+				{{data.date | date:'shortTime'}}
 				<i class="glyphicon glyphicon-time"></i>
 			</span>
 		</div>
 		
-		<div class="col-md-5 titleBlock">
+		
+		<div class="col-md-5 col-xs-6 titleBlock ">
 			<h3>{{data.title}}</h3>
 			<p>{{data.content}}</p>
 		</div>
 
-		<div class="col-md-5">
-			<img [src] = "data.image" class="img-responsive">
-			
+		<div class="col-md-5 col-xs-6">
+			<img [src] = "data.ImageUrl" class="img-responsive imageBlock">
 		</div>
-
+		
 	</div>
 	<hr>
-</div>	
+	
