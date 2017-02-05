@@ -22,7 +22,7 @@ export class AdminPanelComponent implements OnInit {
   addNews(news) {
     console.log(news);
 
-    this.http.post('http://127.0.0.1:3000/',news)
+    this.http.post('http://127.0.0.1:3000/genseeds',news)
       .subscribe(response => {
         console.log(response.status); // logs 200
         console.log(response.headers); // logs []

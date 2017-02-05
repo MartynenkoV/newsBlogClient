@@ -15,15 +15,16 @@
 		</div>
 		
 		
-		<div class="col-md-5 col-xs-6 titleBlock ">
+		<div class="col-md-5 col-xs-6 titleBlock nopadding">
 			<h3>{{data.title}}</h3>
-			<p>{{data.content}}</p>
+			<p>{{data.description}}</p>
+			<div [innerHTML]="data.content.content"></div>
 		</div>
 
-		<div class="col-md-5 col-xs-6">
+		<div class="col-md-5 col-xs-6 nopadding">
 			<img [src] = "data.ImageUrl" class="img-responsive imageBlock">
 		</div>
-		
+	
 	</div>
 	<hr>
 	

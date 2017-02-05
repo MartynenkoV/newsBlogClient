@@ -1,27 +1,21 @@
 .back{
 	background-color: #005689;
 }
-.cntrbar{
-	color: white;
-	padding: 10px;
-}
+
 .logo{
 	text-align: right;
-	padding-right: 15%
+	/*padding-right: 15%*/
 }
 .nav{
 	color: white;
 	background-color: #00507f;
-	text-align: center;
 	width: 100%;
-	padding-left: 15%;
-	padding-right: 15%;
 }
 
 .breadcrumbs{
 	color: white;
 	background-color: gray;
-	text-align: center;
+	/*text-align: center;*/
 	width: 100%;
 	padding-top: 5px;
 	padding-left: 15%;
@@ -49,8 +43,6 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-  /*  background-color: #111;*/
     text-decoration: underline;
 }

@@ -10,15 +10,6 @@ export class NewsPreviewComponent implements OnInit {
   
   @Input() data:any; 	
 
-  
-
-  // data = {
-  // 	title:"Title1",
-  // 	content:"aaaaaaaa",
-  // 	date: "dd/MM/yyyy",
-  // 	comments:[1,2,3,4,5,6],
-  // 	image:"../assets/hierarchicalstructureofthei.jpg"
-  // }
 
   constructor() { }
 

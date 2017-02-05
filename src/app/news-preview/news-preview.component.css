@@ -1,7 +1,11 @@
 .container{
-	background-color: white;
+	/*background-color: white;*/
 	/*border: 1px solid black;*/
 }	
+
+/*.shadow{
+    box-shadow: 5px 5px 3px 1px #999;
+}*/
 
 .dateBlock{
 	/*min-height: 345px;*/
@@ -15,6 +19,7 @@
 }
 .titleBlock{
 	background-color: #A8A8A8;
+    
 }
 
 .titleBlock:hover { 
@@ -36,4 +41,10 @@
         display: table-cell;
         vertical-align: top;
     }
+}
+
+.nopadding {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+   /*margin: 0 !important;*/
 }

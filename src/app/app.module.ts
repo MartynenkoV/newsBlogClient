@@ -12,6 +12,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { routing }   from './app.routing';
 import { NewsPreviewComponent } from './news-preview/news-preview.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { NewsPageComponent } from './news-page/news-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     FooterComponent,
     HomePageComponent,
     NewsPreviewComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    NewsPageComponent
   ],
   imports: [
     BrowserModule,
