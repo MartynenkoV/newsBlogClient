@@ -1,9 +1,21 @@
 <div class='back'>
-  <!-- 	<div class = 'cntrbar'>navbar</div>
- -->
+
  <div class='container'>
+	 <div class = 'row'>	
+      <ul [ngStyle]="{'background-color': 'transparent','font-weight': 'bold'}">
+		<li><a><i class="glyphicon glyphicon-user"></i></a></li>
+        <li><a routerLink="/signin" routerLinkActive="active">signin</a></li>
+        <li><a routerLink="/signup" routerLinkActive="active">signup</a></li>
+        <!--<li><a >signout</a></li>-->
+      </ul>
+	  </div>
+    
+
+
   <div class='logo'>
+    <a routerLink="/">
     <img src="../assets/logo.png">
+    </a>
   </div>
  </div>
   <div class='nav'>
@@ -20,7 +32,7 @@
     </div>
   </div>
   <div class='breadcrumbs'>
-    <div class='container'>
+    <div class='container breadin'>
       home
     </div>
   </div>

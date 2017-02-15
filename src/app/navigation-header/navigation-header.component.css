@@ -12,16 +12,6 @@
 	width: 100%;
 }
 
-.breadcrumbs{
-	color: white;
-	background-color: gray;
-	/*text-align: center;*/
-	width: 100%;
-	padding-top: 5px;
-	padding-left: 15%;
-	padding-right: 15%;
-}
-
 
 ul {
     list-style-type: none;
@@ -29,6 +19,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #00456e;
+	
 }
 
 li {
@@ -45,4 +36,19 @@ li a {
 
 li a:hover {
     text-decoration: underline;
+}
+
+
+.breadcrumbs{
+	color: #0d85c6;
+	background-color: #e5e5e5;
+	/*text-align: center;*/
+	width: 100%;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.breadin{
+	background-color: #dfdfdf;
 }

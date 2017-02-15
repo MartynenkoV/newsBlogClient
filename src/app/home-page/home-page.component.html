@@ -1,4 +1,6 @@
+<div class="back">
 <div class="container back">
+  <div *ngIf="!isLoading">
   <app-news-preview *ngFor="let item of data" [data]="item"></app-news-preview>
   <ul class="pagination">
     <li *ngIf="currentPage != 0" (click)='refreshDB()'><a routerLink="/{{currentPage-1}}">&laquo;</a></li>
@@ -7,4 +9,9 @@
     <!--<li><a class="active" href="#">2</a></li>-->
     <li *ngIf="currentPage < numberPages/4-1" (click)='refreshDB()'><a routerLink="/{{currentPage+1}}">&raquo;</a></li>
   </ul>
+  </div>
+  <div *ngIf="isLoading">
+    Loading
+  </div> 
+</div>
 </div>

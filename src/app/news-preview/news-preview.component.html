@@ -1,30 +1,21 @@
-
-	<div class="row is-table-row">
-
-		<div class="col-md-2 col-xs-12 dateBlock">
-			{{data.date | date}}
-
-			<br>
-			<span>
-				{{data.comments.length}}
-				<i class="glyphicon glyphicon-comment"></i>
-				|
-				{{data.date | date:'shortTime'}}
-				<i class="glyphicon glyphicon-time"></i>
-			</span>
-		</div>
-		
-		
-		<div class="col-md-5 col-xs-6 titleBlock nopadding">
-			<h3>{{data.title}}</h3>
-			<p>{{data.description}}</p>
-			<div [innerHTML]="data.content.content"></div>
-		</div>
-
-		<div class="col-md-5 col-xs-6 nopadding">
-			<img [src] = "data.ImageUrl" class="img-responsive imageBlock">
-		</div>
-	
-	</div>
-	<hr>
-	
+<div class="row is-table-row border">
+  <div class="col-md-2 col-xs-12 dateBlock">
+    {{data.date | date}}
+    <br>
+    <span>
+			{{data.comments.length}}
+			<i class="glyphicon glyphicon-comment"></i>
+			|
+			{{data.date | date:'shortTime'}}
+			<i class="glyphicon glyphicon-time"></i>
+	</span>
+  </div>
+  <div class="col-md-5 col-xs-6 titleBlock nopadding" routerLink="/news/{{data._id}}" routerLinkActive="active">
+    <h3>{{data.title}}</h3>
+    <p>{{data.description}}</p>
+    <!--<div [innerHTML]="data.content.content"></div>-->
+  </div>
+  <div class="col-md-5 col-xs-6 nopadding" routerLink="/news/{{data._id}}" routerLinkActive="active">
+    <img [src]="data.ImageUrl" class="img-responsive imageBlock">
+  </div>
+</div>

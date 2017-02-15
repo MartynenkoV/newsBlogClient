@@ -1,15 +1,11 @@
-.container{
-	/*background-color: white;*/
-	/*border: 1px solid black;*/
-}	
-
-/*.shadow{
-    box-shadow: 5px 5px 3px 1px #999;
-}*/
+.border{
+    border-bottom: 2px  solid #efefec;
+}
 
 .dateBlock{
 	/*min-height: 345px;*/
 	position: relative;
+    background-color: white;
 }
 @media only screen and (min-width : 1024px){
 .dateBlock span{
@@ -18,12 +14,12 @@
 }
 }
 .titleBlock{
-	background-color: #A8A8A8;
+	background-color: #efefec;
     
 }
 
 .titleBlock:hover { 
-    background-color: #90908C;
+    background-color: #DCDCDC;
 	cursor: pointer;
 }
 

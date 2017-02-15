@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map';
 })
 export class HomePageComponent implements OnInit {
 
+  isLoading:Boolean = true;
 
   data = [];
 
@@ -25,6 +26,7 @@ export class HomePageComponent implements OnInit {
     this.refreshDB();
   }
   refreshDB(){
+    //this.isLoading = true;
 	  this.currentPage = parseInt(this.route.snapshot.url.toString());
     if(isNaN(this.currentPage.valueOf())){
       this.currentPage=0;
@@ -34,6 +36,7 @@ export class HomePageComponent implements OnInit {
       .subscribe(response => {
         this.data = response.json().news;
         this.numberPages = response.json().count;
+        this.isLoading = false;
       });
   }
 
