@@ -15,7 +15,7 @@ export class NewsPageComponent implements OnInit {
 
     //console.log(this.route.snapshot.url[1].toString());
 
-    this.http.get('http://localhost:3000/news/' + this.route.snapshot.url[1].toString())
+    this.http.get('http://localhost:3000/news/id/' + this.route.snapshot.url[1].toString())
       .subscribe(response => {
         //if 404
         this.News = response.json().news;

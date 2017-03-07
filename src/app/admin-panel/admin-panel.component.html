@@ -1,15 +1,13 @@
 <h1>Send news</h1>
-<div class="container">
-  <div class="row ">
-    <div class="col-md-6">
-      <form  (ngSubmit)='addNews(newsForm.value)' #newsForm="ngForm">
-        <input name="title" type="text" class="form-control" placeholder="title" required autofocus ngModel>
-        <!--<div *ngIf="title.dirty && title.hasError('required')">Username is
+<div class="row ">
+  <div class="col-md-6">
+    <form (ngSubmit)='addNews(newsForm.value)' #newsForm="ngForm">
+      <input name="title" type="text" class="form-control" placeholder="title" required autofocus ngModel>
+      <!--<div *ngIf="title.dirty && title.hasError('required')">Username is
         required</div>-->
-        <input name="content" type="text" class="form-control" placeholder="content" required ngModel>
-        <input name="ImageUrl" type="text" class="form-control" placeholder="ImageUrl" required ngModel>
-        <input type="submit"  class="btn btn-primary btn-block">
-      </form>
-    </div>
+      <input name="content" type="text" class="form-control" placeholder="content" required ngModel>
+      <input name="ImageUrl" type="text" class="form-control" placeholder="ImageUrl" required ngModel>
+      <input type="submit" class="btn btn-primary btn-block">
+    </form>
   </div>
 </div>

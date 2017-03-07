@@ -32,7 +32,7 @@ export class HomePageComponent implements OnInit {
       this.currentPage=0;
     }
 	
-    this.http.get('http://localhost:3000/' + this.currentPage.valueOf())
+    this.http.get('http://localhost:3000/news/' + this.currentPage.valueOf())
       .subscribe(response => {
         this.data = response.json().news;
         this.numberPages = response.json().count;
